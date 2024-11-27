@@ -2,6 +2,7 @@
 
 import { useFormState, useFormStatus } from "react-dom";
 import { sendEmail } from "../api/actions";
+import { useActionState } from "react";
 
 const initialState = {
   success: "",
@@ -13,11 +14,11 @@ const initialState = {
 };
 
 function ContactForm() {
-  const [state, formAction] = useFormState(sendEmail, initialState);
+  const [state, formAction] = useActionState(sendEmail, initialState);
   return (
     <div className="w-full max-w-xs">
       <form
-        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        className="bg-blue-600 shadow-md rounded px-8 pt-6 pb-8 mb-4"
         action={formAction}
       >
         <div className="mb-4">
@@ -67,8 +68,6 @@ function ContactForm() {
             name="message"
             id="message"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-            cols={30}
-            rows={10}
           ></textarea>
           {state.errors?.message && (
             <p className="text-red-500">{state.errors.message}</p>
