@@ -3,7 +3,7 @@ import Button from "../reusable components/Button";
 
 function AboutMe() {
   return (
-    <div className="flex flex-col py-16 gap-6 md:gap-16 md:flex-row md:justify-evenly md:items-center">
+    <div className="flex h-screen flex-col py-16 gap-6 md:gap-16 md:flex-row md:justify-evenly md:items-center">
       <div className="flex justify-center px-9 md:pl-9 md:px-0">
         <Image
           alt="hana_at_work"

@@ -22,22 +22,25 @@ function Header() {
   }
 
   return (
-    <header className="relative py-5 px-6">
-      <nav className="flex justify-between md:justify-around items-center gap-6 sticky">
+    <header className="sticky top-0 py-5 px-6 backdrop-blur-lg backdrop-brightness-100">
+      <nav className="flex justify-between md:justify-around items-center gap-6">
         <div>
           {/* <Link href="/"><Image alt="alt_text" src="" height={100} width={100} /></Link> */}
-          <Link href="#"><h1 className="text-2xl">Logo</h1></Link>
+          <Link href="/"><h1 className="text-2xl">Logo</h1></Link>
         </div>
         <div className="hidden md:block">
           <ul className="flex gap-6 justify-around">
-            <li className="font-bold hover:underline hover:text-green-600 transition-all">
-              <Link href="/contact-us">Contact Us</Link>
+            <li className="font-bold hover:underline hover:text-blue-600 transition-all">
+              <Link href="/contact-me">Contact me</Link>
             </li>
-            <li className="font-bold hover:underline hover:text-green-600 transition-all">
+            <li className="font-bold hover:underline hover:text-blue-600 transition-all">
               <Link href="/blog">Blog</Link>
             </li>
-            <li className="font-bold hover:underline hover:text-green-600 transition-all">
-              <Link href="/training-programs">Training programs</Link>
+            <li className="font-bold hover:underline hover:text-blue-600 transition-all">
+              <Link href="/services">Services</Link>
+            </li>
+            <li className="font-bold hover:underline hover:text-blue-600 transition-all">
+              <Link href="/about-me">About me</Link>
             </li>
           </ul>
         </div>
@@ -53,14 +56,17 @@ function Header() {
       {isMenuOpen && (
         <div className="py-8 pl-6 rounded-lg absolute w-full left-0 border top-20 bg-white text-black mx-5">
           <ul className="flex flex-col gap-8">
-            <li className="hover:text-green-600 hover:underline font-bold">
-              <Link href="/contact-us">Contact Us</Link>
+            <li className="hover:text-blue-600 hover:underline font-bold">
+              <Link href="/contact-us">Contact Me</Link>
             </li>
-            <li className="hover:text-green-600 hover:underline font-bold">
+            <li className="hover:text-blue-600 hover:underline font-bold">
               <Link href="/blog">Blog</Link>
             </li>
-            <li className="hover:text-green-600 hover:underline font-bold">
-              <Link href="/training-programs">Training programs</Link>
+            <li className="hover:text-blue-600 hover:underline font-bold">
+              <Link href="/services">Services</Link>
+            </li>
+            <li className="hover:text-blue-600 hover:underline font-bold">
+              <Link href="/about-me">About me</Link>
             </li>
           </ul>
         </div>

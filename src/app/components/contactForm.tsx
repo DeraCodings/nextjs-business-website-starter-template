@@ -18,7 +18,7 @@ function ContactForm() {
   return (
     <div className="w-full max-w-xs">
       <form
-        className="bg-blue-600 shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        className="shadow-none rounded px-8 pt-6 pb-8 mb-4"
         action={formAction}
       >
         <div className="mb-4">
