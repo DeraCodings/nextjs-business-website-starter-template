@@ -2,13 +2,13 @@ import SliderComponent from "../reusable components/SliderComponent";
 
 function Testimonials() {
   return (
-    <div className="overflow-x-hidden h-full md:h-screen flex flex-col justify-center px-10 py-20">
-      <div className="text-center">
+    <section className="overflow-x-hidden h-full md:h-screen flex flex-col justify-center px-10 py-20">
+      <section className="text-center">
         <small className="text-xs bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
           Testimonials
         </small>
         <h2 className="text-2xl font-bold">My patients say</h2>
-      </div>
+      </section>
       <SliderComponent>
         <TestimonialCard />
         <TestimonialCard />
@@ -17,7 +17,7 @@ function Testimonials() {
         <TestimonialCard />
         <TestimonialCard />
       </SliderComponent>
-    </div>
+    </section>
   );
 }
 

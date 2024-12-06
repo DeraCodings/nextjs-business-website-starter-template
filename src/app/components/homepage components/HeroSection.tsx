@@ -3,8 +3,8 @@ import Button from "../reusable components/Button";
 
 function HeroSection() {
   return (
-    <div className="relative h-screen flex flex-col md:flex-row gap-4 justify-center md:gap-0 items-center">
-      <div className="flex flex-col gap-4 pl-16 justify-center my-4">
+    <section className="relative h-screen flex flex-col md:flex-row gap-4 justify-center md:gap-0 items-center">
+      <section className="flex flex-col gap-4 pl-16 justify-center my-4">
         <h1 className="font-semibold">
           <span className="text-xl">I&apos;m Dr. Hana Nakamura</span>
           <br />
@@ -21,8 +21,8 @@ function HeroSection() {
         </p>
         <Button url="#">Book appointment</Button>
         {/* <Button url="#"></Button> */}
-      </div>
-      <div className="relative">
+      </section>
+      <section className="">
         <Image
           alt="hana_nakamura"
           src="/images/hana_with_blob.png"
@@ -30,8 +30,8 @@ function HeroSection() {
           height={200}
           className="w-full h-full"
         />
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }
 

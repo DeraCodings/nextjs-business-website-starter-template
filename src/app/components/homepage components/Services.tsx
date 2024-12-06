@@ -3,14 +3,14 @@ import ServicesCard from "../reusable components/ServicesCard";
 
 function Services() {
   return (
-    <div className="">
-      <div className="text-center my-5">
+    <section className="">
+      <section className="text-center my-5">
         <small className="text-xs bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
           My Services
         </small>
         <h2 className="text-2xl font-bold">What can I help you with?</h2>
-      </div>
-      <div className="flex flex-wrap flex-col gap-5 justify-center items-center md:flex-row">
+      </section>
+      <section className="flex flex-wrap flex-col gap-5 justify-center items-center md:flex-row">
         <ServicesCard
           alt="chronic-illness"
           src="/images/chronic-illness.png"
@@ -60,8 +60,8 @@ function Services() {
           description="Virtual consultations for non-emergency health concerns from your home."
           button={false}
         />
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }
 

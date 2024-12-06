@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use server";
 
+import { log } from "console";
 import { z } from "zod";
 
 type Error = {
@@ -42,4 +43,24 @@ export async function sendEmail(prevState: any, formData: FormData) {
   return {
     success: "Your message was sent successfully!",
   };
+}
+
+const emailSchema = z.string().email({message: "Invalid email address"});
+
+export async function subscribeToNewsletter(prevState:any, formData: FormData) {
+  const emailData = formData.get('email');
+  const validatedEmailData = emailSchema.safeParse(emailData);
+
+  if(!validatedEmailData.success){
+    const emailFieldError = validatedEmailData.error.formErrors.formErrors[0];
+
+    console.log(emailFieldError);
+    return {
+      error: emailFieldError,
+    }
+  }
+
+  return {
+    success: "You are successfully subscribed"
+  }
 }
