@@ -2,7 +2,7 @@
 
 import { useFormState, useFormStatus } from "react-dom";
 import { sendEmail } from "../api/actions";
-import { useActionState } from "react";
+// import { useActionState } from "react";
 
 const initialState = {
   success: "",
@@ -14,7 +14,7 @@ const initialState = {
 };
 
 function ContactForm() {
-  const [state, formAction] = useActionState(sendEmail, initialState);
+  const [state, formAction] = useFormState(sendEmail, initialState);
   return (
     <div className="w-full max-w-xs">
       <form

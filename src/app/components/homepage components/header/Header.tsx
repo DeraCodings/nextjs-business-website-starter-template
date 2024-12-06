@@ -16,7 +16,7 @@ function Header() {
   }
 
   return (
-    <header className="sticky top-0 py-5 px-6 bg-blue-600">
+    <header className="sticky top-0 py-5 px-6 bg-white">
       <nav className="flex justify-between md:justify-around items-center gap-6">
         <div>
           {/* <Link href="/"><Image alt="alt_text" src="" height={100} width={100} /></Link> */}
