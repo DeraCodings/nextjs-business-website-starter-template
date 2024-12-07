@@ -4,17 +4,24 @@ import { useFormStatus } from "react-dom";
 import { sendEmail } from "../api/actions";
 import { useActionState } from "react";
 
-const initialState = {
-  success: "",
-  errors: {
-    name: "",
-    email: "",
-    message: "",
-  },
-};
+// const initialState = {
+//   success: "",
+//   errors: {
+//     name: "",
+//     email: "",
+//     message: "",
+//   },
+// };
 
 function ContactForm() {
-  const [state, formAction] = useActionState(sendEmail, initialState);
+  const [state, formAction] = useActionState(sendEmail, {
+    success: "",
+    errors: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
   return (
     <div className="w-full max-w-xs">
       <form
@@ -74,9 +81,9 @@ function ContactForm() {
           )}
         </div>
         <div className="flex items-center justify-between">
-            <SubmitButton />
+          <SubmitButton />
         </div>
-      {state?.success && <p className="text-green-600">{state.success}</p>}
+        {state?.success && <p className="text-green-600">{state.success}</p>}
       </form>
     </div>
   );
