@@ -1,4 +1,7 @@
-## Welcome to this tutorial on how to handle forms using server actions and zod
+## Welcome to this portfolio website template for personal doctors
 
-For the complete article, visit the [link]()
+This template is primarily for personal doctors and is bare bones. 
 
+This means that you can customize the template for any portfolio website need.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FDeraCodings%2Fnextjs-business-website-starter-template)
