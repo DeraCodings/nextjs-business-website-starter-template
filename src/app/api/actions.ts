@@ -3,16 +3,16 @@
 
 import { z } from "zod";
 
-type Error = {
-    name?: string;
-    email?: string;
-    message?: string
-}
+// type Error = {
+//     name?: string;
+//     email?: string;
+//     message?: string
+// }
 
-type InitialState = {
-    message?: string;
-    errors?: Error;
-}
+// type InitialState = {
+//     message?: string;
+//     errors?: Error;
+// }
 
 const contactFormSchema = z.object({
   name: z.string().trim().min(1, { message: "Name field is required" }),
@@ -20,7 +20,7 @@ const contactFormSchema = z.object({
   message: z.string().trim().min(1, { message: "Please type in a message" }),
 });
 
-export async function sendEmail(prevState: InitialState, formData: FormData) {
+export async function sendEmail(prevState: any, formData: FormData) {
   const contactFormData = Object.fromEntries(formData);
   const validatedContactFormData = contactFormSchema.safeParse(contactFormData);
 
