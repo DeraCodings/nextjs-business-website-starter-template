@@ -18,7 +18,7 @@ function BlogPage() {
         <div className="relative flex flex-col py-3 gap-4 md:gap-1 px-5">
           <small className="text-sm">Article</small>
           <Link href="/blog/#">
-            <h2 className="text-2xl font-bold hover:opacity-85 transition-opacity hover:text-blue-600">
+            <h2 className="text-2xl font-bold hover:opacity-85 transition-opacity hover:text-black">
               Why Vitamin D is healthy for your skin
             </h2>
           </Link>

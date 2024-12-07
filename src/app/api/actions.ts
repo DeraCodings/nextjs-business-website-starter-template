@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use server";
 
-import { log } from "console";
 import { z } from "zod";
 
 type Error = {
@@ -10,7 +9,7 @@ type Error = {
     message?: string
 }
 
-type initialState = {
+type InitialState = {
     message?: string;
     errors?: Error;
 }
@@ -21,7 +20,7 @@ const contactFormSchema = z.object({
   message: z.string().trim().min(1, { message: "Please type in a message" }),
 });
 
-export async function sendEmail(prevState: any, formData: FormData) {
+export async function sendEmail(prevState: InitialState, formData: FormData) {
   const contactFormData = Object.fromEntries(formData);
   const validatedContactFormData = contactFormSchema.safeParse(contactFormData);
 

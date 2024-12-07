@@ -1,8 +1,8 @@
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useFormStatus } from "react-dom";
 import { sendEmail } from "../api/actions";
-// import { useActionState } from "react";
+import { useActionState } from "react";
 
 const initialState = {
   success: "",
@@ -14,7 +14,7 @@ const initialState = {
 };
 
 function ContactForm() {
-  const [state, formAction] = useFormState(sendEmail, initialState);
+  const [state, formAction] = useActionState(sendEmail, initialState);
   return (
     <div className="w-full max-w-xs">
       <form
